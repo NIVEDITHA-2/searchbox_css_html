@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<style>
+    *
+    {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family:sans-serif;
+    }
+    body{
+        background: #ff6760;
+        height:100vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .box
+    {
+    
+        max-width: 400px;
+        width: 100%;
+        
+    }
+    .box .search-box
+    {
+        position: relative;
+        max-width: 50px;
+        height: 50px;
+        margin: auto;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+        transition: all 0.3s ease;
+    }
+    #check:checked ~ .search-box
+    {
+        max-width: 380px;
+        color: #ff6760;
+    }
+    #check
+    {
+        display: none;
+        
+    }
+    .search-box input
+    {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: none;
+        border-radius: 25px;
+        padding-left: 20px;
+        font-size: 18px;   
+        background: #fff;
+        position: absolute;
+    }
+
+    .search-box .icon
+    {
+        position: absolute;
+        right:-2px;
+        top:0;
+        width: 50px;
+        background: #ff6760;
+        height: 100%;
+        border-radius: 25px;
+        line-height: 50px;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+
+    }
+    #check:checked ~ .search-box .icon
+    {
+        background: #ff6760;
+        border-radius: 0 25px 25px 0;
+        width: 60px;
+    }
+
+</style>
+<body>
+    <div class="box">
+        <input type="checkbox" id="check">
+        <div class="search-box">
+            <input type="text" placeholder="Type here...">
+            <label for="check" class="icon">
+                <i class="fas fa-search"></i>
+            </label>
+        </div>
+    </div>
+</body>
+</html>
